@@ -1,0 +1,645 @@
+<html><head><meta charset='utf-8'/>
+<style>body{font-family:Arial, sans-serif; max-width:1200px; margin:24px auto; padding:0 12px;}h2{margin-top:36px;}.grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:12px;}.card{border:1px solid #ddd; border-radius:8px; padding:8px;}.card img{width:100%; height:auto; border-radius:6px;}.small{color:#555; font-size:12px;}pre{background:#f7f7f7; padding:10px; border-radius:8px; overflow:auto;}</style>
+</head><body>
+<h1>Teacher threshold visualization</h1>
+<pre>
+{
+  &quot;text_sim_threshold&quot;: 0.3,
+  &quot;image_sim_threshold&quot;: 0.65,
+  &quot;teacher_text_model&quot;: &quot;sentence-transformers/all-MiniLM-L6-v2&quot;,
+  &quot;teacher_image_arch&quot;: &quot;clip&quot;,
+  &quot;teacher_image_model&quot;: &quot;openai/clip-vit-base-patch32&quot;,
+  &quot;cache_dir&quot;: &quot;./cache&quot;
+}
+</pre>
+<h2>Query 0: image_id=522871</h2>
+<div class='card'>
+<img src='thumbs/query_0_img_522871.jpg'/>
+<div class='small'><b>Captions (GT)</b><br/>an ostrich walking sneakily towards a couple of zebra<br/>Two zebras attempting to graze on dirt with an ostrich standing near by <br/>An ostrich in the foreground and zebras in the background in a fenced in area.<br/>An ostrich and two zebras in a zoo.<br/>Two zebras are scarcely grazing in sand while an ostrich watches them.</div>
+</div>
+<h3>Similar images (teacher cosine ≥ threshold)</h3>
+<div class='grid'>
+<div class='card'>
+<img src='thumbs/q0_sim_img_399835.jpg'/>
+<div class='small'>image_id=399835<br/>cos=0.933<br/>Several zebras are huddled together and a log is visible in the background.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_sim_img_524991.jpg'/>
+<div class='small'>image_id=524991<br/>cos=0.933<br/>A group of zebras go grazing in a park with other animals. </div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_sim_img_91875.jpg'/>
+<div class='small'>image_id=91875<br/>cos=0.928<br/>A picture of two animals that are in the dirt.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_sim_img_494039.jpg'/>
+<div class='small'>image_id=494039<br/>cos=0.927<br/>A couple of zebra grazing on a green field.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_sim_img_102610.jpg'/>
+<div class='small'>image_id=102610<br/>cos=0.926<br/>A pack of zebra sand side by side on a dirt lot.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_sim_img_224848.jpg'/>
+<div class='small'>image_id=224848<br/>cos=0.926<br/>A couple of zebra standing next to each other near a tree.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_sim_img_327881.jpg'/>
+<div class='small'>image_id=327881<br/>cos=0.925<br/>A couple of zebra standing in a dirt field.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_sim_img_1777.jpg'/>
+<div class='small'>image_id=1777<br/>cos=0.924<br/>A ZEBRA AND AND OSTRICH ARE NEXT TO EACH OTHER</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_sim_img_151235.jpg'/>
+<div class='small'>image_id=151235<br/>cos=0.923<br/>Two adult zebras and a baby are in an enclosure.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_sim_img_569261.jpg'/>
+<div class='small'>image_id=569261<br/>cos=0.923<br/>Two zebra standing next to each other on dirt.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_sim_img_104898.jpg'/>
+<div class='small'>image_id=104898<br/>cos=0.922<br/>Three zebras in their habitat in the wilderness</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_sim_img_332385.jpg'/>
+<div class='small'>image_id=332385<br/>cos=0.921<br/>A group of zebras standing in a dirt enclosure.</div>
+</div>
+</div>
+<h3>Dissimilar images (teacher cosine &lt; threshold)</h3>
+<div class='grid'>
+<div class='card'>
+<img src='thumbs/q0_dis_img_358088.jpg'/>
+<div class='small'>image_id=358088<br/>cos=0.487<br/>A boat with a flag on the front of it sitting in the water. </div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_dis_img_363621.jpg'/>
+<div class='small'>image_id=363621<br/>cos=0.550<br/>A dog is standing on a chair at a computer desk.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_dis_img_535019.jpg'/>
+<div class='small'>image_id=535019<br/>cos=0.456<br/>A train engine carrying carts down a track through the woods.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_dis_img_262654.jpg'/>
+<div class='small'>image_id=262654<br/>cos=0.468<br/>A white plate topped with different types of food.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_dis_img_396252.jpg'/>
+<div class='small'>image_id=396252<br/>cos=0.597<br/>The bluebird is just sitting quietly on the branch.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_dis_img_195113.jpg'/>
+<div class='small'>image_id=195113<br/>cos=0.569<br/>This is a colander with green apples in it.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_dis_img_372305.jpg'/>
+<div class='small'>image_id=372305<br/>cos=0.451<br/>Students are walking through a hallway with tables and chairs at the side.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_dis_img_109515.jpg'/>
+<div class='small'>image_id=109515<br/>cos=0.530<br/>A man riding a skateboard up a ramp at a skate park.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_dis_img_548464.jpg'/>
+<div class='small'>image_id=548464<br/>cos=0.504<br/>A green traffic signal at an intersection in a town.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_dis_img_392747.jpg'/>
+<div class='small'>image_id=392747<br/>cos=0.563<br/>a group of teddy bears in a display to look like a boy band performing for an audience </div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_dis_img_537408.jpg'/>
+<div class='small'>image_id=537408<br/>cos=0.584<br/>a man standing next to a white horse.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_dis_img_49933.jpg'/>
+<div class='small'>image_id=49933<br/>cos=0.351<br/>Young female tennis player preparing to play a point</div>
+</div>
+</div>
+<h3>Similar captions to query caption (cosine ≥ threshold)</h3>
+<div class='small'><b>Query caption</b>: an ostrich walking sneakily towards a couple of zebra</div>
+<div class='grid'>
+<div class='card'>
+<img src='thumbs/q0_sim_cap_99948_img_1777.jpg'/>
+<div class='small'>caption_id=99948<br/>cos=0.810<br/>A ZEBRA AND AND OSTRICH ARE NEXT TO EACH OTHER</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_sim_cap_97048_img_574349.jpg'/>
+<div class='small'>caption_id=97048<br/>cos=0.808<br/>A zebra and an ostrich walk around a pen.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_sim_cap_611434_img_56850.jpg'/>
+<div class='small'>caption_id=611434<br/>cos=0.807<br/>An ostrich steps in front of a zebra that is eating grass.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_sim_cap_95755_img_574349.jpg'/>
+<div class='small'>caption_id=95755<br/>cos=0.804<br/>A zebra and an ostrich wandering an enclosure.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_sim_cap_370390_img_542173.jpg'/>
+<div class='small'>caption_id=370390<br/>cos=0.792<br/>There are a zebra and an ostrich in the wildlife. </div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_sim_cap_372295_img_542173.jpg'/>
+<div class='small'>caption_id=372295<br/>cos=0.777<br/>The zebra is sharing a habitat with an ostrich.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_sim_cap_286682_img_371106.jpg'/>
+<div class='small'>caption_id=286682<br/>cos=0.770<br/>A zebra and an ostrich up close with other animals in the background.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_sim_cap_610744_img_56850.jpg'/>
+<div class='small'>caption_id=610744<br/>cos=0.762<br/>an ostrich standing next to a zebra that is eating some grass </div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_sim_cap_364061_img_306383.jpg'/>
+<div class='small'>caption_id=364061<br/>cos=0.762<br/>a zebra stands next to an ostrich </div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_sim_cap_88453_img_574349.jpg'/>
+<div class='small'>caption_id=88453<br/>cos=0.758<br/>An ostrich and a zebra in a pin.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_sim_cap_159803_img_431901.jpg'/>
+<div class='small'>caption_id=159803<br/>cos=0.751<br/>There is a zebra grazing with ostriches behind it.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_sim_cap_64579_img_522871.jpg'/>
+<div class='small'>caption_id=64579<br/>cos=0.751<br/>An ostrich in the foreground and zebras in the background in a fenced in area.</div>
+</div>
+</div>
+<h3>Dissimilar captions to query caption (cosine &lt; threshold)</h3>
+<div class='grid'>
+<div class='card'>
+<img src='thumbs/q0_dis_cap_327642_img_130441.jpg'/>
+<div class='small'>caption_id=327642<br/>cos=0.300<br/>Three cows standing in water up to their backs</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_dis_cap_814091_img_293587.jpg'/>
+<div class='small'>caption_id=814091<br/>cos=-0.043<br/>A child who is in bed sleeping with toys.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_dis_cap_368826_img_568653.jpg'/>
+<div class='small'>caption_id=368826<br/>cos=0.126<br/>a black and silver motorcycle is parked and some people</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_dis_cap_547078_img_374486.jpg'/>
+<div class='small'>caption_id=547078<br/>cos=0.273<br/>two tall giraffes in the forest gazing around</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_dis_cap_211754_img_329667.jpg'/>
+<div class='small'>caption_id=211754<br/>cos=-0.008<br/>A laptop is set up on a stand outside.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_dis_cap_571386_img_264855.jpg'/>
+<div class='small'>caption_id=571386<br/>cos=0.239<br/>a horse that is looking into a window</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_dis_cap_132744_img_378183.jpg'/>
+<div class='small'>caption_id=132744<br/>cos=0.095<br/>A green and red fire hydrant with a large white house in background.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_dis_cap_785700_img_581332.jpg'/>
+<div class='small'>caption_id=785700<br/>cos=-0.036<br/>Three glasses of wine sitting on a wooden table.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_dis_cap_793774_img_116927.jpg'/>
+<div class='small'>caption_id=793774<br/>cos=0.091<br/>a man that is skiing jumping off a ramp</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_dis_cap_220739_img_39859.jpg'/>
+<div class='small'>caption_id=220739<br/>cos=0.136<br/>Two trains in a station that look like they are touching each other.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_dis_cap_464344_img_429455.jpg'/>
+<div class='small'>caption_id=464344<br/>cos=0.022<br/>A white plate topped with two slices of pizza on top of a wooden table.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q0_dis_cap_707810_img_184778.jpg'/>
+<div class='small'>caption_id=707810<br/>cos=0.086<br/>A fire hydrant that has been painted many colors in a tropical area.</div>
+</div>
+</div>
+<h2>Query 1: image_id=559995</h2>
+<div class='card'>
+<img src='thumbs/query_1_img_559995.jpg'/>
+<div class='small'><b>Captions (GT)</b><br/>A street sign on the pole points travelers in the right direction<br/>A child crossing the street with a one way sign.<br/>A white one way street sign sitting on the side of a road.<br/>A one way sign on a street corner. <br/>Little boy preparing to cross the street in a city center.</div>
+</div>
+<h3>Similar images (teacher cosine ≥ threshold)</h3>
+<div class='grid'>
+<div class='card'>
+<img src='thumbs/q1_sim_img_454253.jpg'/>
+<div class='small'>image_id=454253<br/>cos=0.783<br/>A street scene of a crosswalk and cars in the background.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_sim_img_183233.jpg'/>
+<div class='small'>image_id=183233<br/>cos=0.775<br/>A man that is standing under a stop sign.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_sim_img_347172.jpg'/>
+<div class='small'>image_id=347172<br/>cos=0.771<br/>some road signs besides a road in the street</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_sim_img_377756.jpg'/>
+<div class='small'>image_id=377756<br/>cos=0.769<br/>A black car parked near an intersection with a no turn sign</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_sim_img_543393.jpg'/>
+<div class='small'>image_id=543393<br/>cos=0.767<br/>A stop sign and other signage at the corner of a street.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_sim_img_32301.jpg'/>
+<div class='small'>image_id=32301<br/>cos=0.767<br/>A lamppost with a sign that reads &quot;no heavy trucking.&quot;</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_sim_img_282372.jpg'/>
+<div class='small'>image_id=282372<br/>cos=0.764<br/>A stop all way sign with a sticker on it that says driving and a one way sign.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_sim_img_517830.jpg'/>
+<div class='small'>image_id=517830<br/>cos=0.763<br/>A stop sign and a lamp post on a street corner</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_sim_img_175951.jpg'/>
+<div class='small'>image_id=175951<br/>cos=0.762<br/>A red and white no parking sign sitting on the side of a street.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_sim_img_447974.jpg'/>
+<div class='small'>image_id=447974<br/>cos=0.761<br/>A traffic light hanging off the side of a pole.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_sim_img_33213.jpg'/>
+<div class='small'>image_id=33213<br/>cos=0.759<br/>A neon green street sign on a sidewalk.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_sim_img_90020.jpg'/>
+<div class='small'>image_id=90020<br/>cos=0.759<br/>The city is filled with one way streets.</div>
+</div>
+</div>
+<h3>Dissimilar images (teacher cosine &lt; threshold)</h3>
+<div class='grid'>
+<div class='card'>
+<img src='thumbs/q1_dis_img_326293.jpg'/>
+<div class='small'>image_id=326293<br/>cos=0.525<br/>A refrigerator is wedged into a very tight space in a narrow kitchen.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_dis_img_100757.jpg'/>
+<div class='small'>image_id=100757<br/>cos=0.458<br/>An &quot;Eva Air&quot; airplane at the airport with &quot;Hello Kitty&quot; decals. </div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_dis_img_310714.jpg'/>
+<div class='small'>image_id=310714<br/>cos=0.323<br/>Three plates filled with foods on a tray.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_dis_img_175011.jpg'/>
+<div class='small'>image_id=175011<br/>cos=0.422<br/>A man holding a microphone and notepad in one hand.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_dis_img_279753.jpg'/>
+<div class='small'>image_id=279753<br/>cos=0.423<br/>Two girls sit at a dining table while two adults stand.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_dis_img_173520.jpg'/>
+<div class='small'>image_id=173520<br/>cos=0.457<br/>A man on a tennis court playing tennis.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_dis_img_214985.jpg'/>
+<div class='small'>image_id=214985<br/>cos=0.471<br/>A young man holding a smart phone in his hands.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_dis_img_68648.jpg'/>
+<div class='small'>image_id=68648<br/>cos=0.433<br/>Two males walking on a beach with a Frisbee.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_dis_img_245873.jpg'/>
+<div class='small'>image_id=245873<br/>cos=0.448<br/>a dog outside looking through a screen door</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_dis_img_381858.jpg'/>
+<div class='small'>image_id=381858<br/>cos=0.486<br/>Two giraffes with necks entwined in an indoor room</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_dis_img_525815.jpg'/>
+<div class='small'>image_id=525815<br/>cos=0.550<br/>A tennis racket laying on a blue floor.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_dis_img_128670.jpg'/>
+<div class='small'>image_id=128670<br/>cos=0.457<br/>A vase is displayed around a variety of plants.</div>
+</div>
+</div>
+<h3>Similar captions to query caption (cosine ≥ threshold)</h3>
+<div class='small'><b>Query caption</b>: A street sign on the pole points travelers in the right direction</div>
+<div class='grid'>
+<div class='card'>
+<img src='thumbs/q1_sim_cap_563397_img_391537.jpg'/>
+<div class='small'>caption_id=563397<br/>cos=0.873<br/>a street pole with signs pointing in different directions</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_sim_cap_814644_img_530783.jpg'/>
+<div class='small'>caption_id=814644<br/>cos=0.860<br/>a pole with street signs that go in every which direction </div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_sim_cap_462433_img_124297.jpg'/>
+<div class='small'>caption_id=462433<br/>cos=0.860<br/>A street sign that is on the side of a pole.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_sim_cap_422898_img_482363.jpg'/>
+<div class='small'>caption_id=422898<br/>cos=0.856<br/>A one way sign above street signs on a pole.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_sim_cap_535514_img_249977.jpg'/>
+<div class='small'>caption_id=535514<br/>cos=0.856<br/>There are road signs on the pole pointing in different directions.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_sim_cap_703170_img_148527.jpg'/>
+<div class='small'>caption_id=703170<br/>cos=0.854<br/>A street sign is connected to a pole.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_sim_cap_417039_img_482363.jpg'/>
+<div class='small'>caption_id=417039<br/>cos=0.851<br/>a pole with street signs and a one way sign </div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_sim_cap_436952_img_39464.jpg'/>
+<div class='small'>caption_id=436952<br/>cos=0.847<br/>A street sign on a pole by a road.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_sim_cap_435802_img_367998.jpg'/>
+<div class='small'>caption_id=435802<br/>cos=0.846<br/>A street sign is shown on a pole.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_sim_cap_438579_img_27108.jpg'/>
+<div class='small'>caption_id=438579<br/>cos=0.846<br/>A street sign is shown on a pole.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_sim_cap_310997_img_294431.jpg'/>
+<div class='small'>caption_id=310997<br/>cos=0.845<br/>A one way sign and street signs on a pole.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_sim_cap_669070_img_294370.jpg'/>
+<div class='small'>caption_id=669070<br/>cos=0.843<br/>Several different street signs pointing in different directions on a pole.</div>
+</div>
+</div>
+<h3>Dissimilar captions to query caption (cosine &lt; threshold)</h3>
+<div class='grid'>
+<div class='card'>
+<img src='thumbs/q1_dis_cap_235738_img_234643.jpg'/>
+<div class='small'>caption_id=235738<br/>cos=0.065<br/>A man is flying a kite in the cloudy sky.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_dis_cap_662022_img_335321.jpg'/>
+<div class='small'>caption_id=662022<br/>cos=0.062<br/>Young skateboarder preparing to perform while others look on.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_dis_cap_394748_img_203621.jpg'/>
+<div class='small'>caption_id=394748<br/>cos=-0.059<br/>Two black cats are casually laying on a computer desk.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_dis_cap_325308_img_12460.jpg'/>
+<div class='small'>caption_id=325308<br/>cos=0.132<br/>a person standing outside with something in their mouth.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_dis_cap_20528_img_320353.jpg'/>
+<div class='small'>caption_id=20528<br/>cos=0.201<br/>A white motorcycle parked in a parking lot.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_dis_cap_590726_img_33505.jpg'/>
+<div class='small'>caption_id=590726<br/>cos=-0.069<br/>A boy playing a video game while standing up. </div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_dis_cap_538532_img_543303.jpg'/>
+<div class='small'>caption_id=538532<br/>cos=0.029<br/>A life sized sculpture of a tusked elephant in greenery </div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_dis_cap_509751_img_34580.jpg'/>
+<div class='small'>caption_id=509751<br/>cos=0.087<br/>a red and white firehydrant sitting in some grass with cars and trees in the background</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_dis_cap_671699_img_45124.jpg'/>
+<div class='small'>caption_id=671699<br/>cos=0.098<br/>A group of people prepare themselves to ski down a hill.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_dis_cap_210132_img_501121.jpg'/>
+<div class='small'>caption_id=210132<br/>cos=0.007<br/>A pet brush is full of dark pet hair.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_dis_cap_399779_img_476846.jpg'/>
+<div class='small'>caption_id=399779<br/>cos=0.030<br/>A man on a tennis court with hand and racket in the air.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q1_dis_cap_6548_img_161947.jpg'/>
+<div class='small'>caption_id=6548<br/>cos=0.167<br/>A banana tree with under ripe bananas hanging from it.</div>
+</div>
+</div>
+<h2>Query 2: image_id=224304</h2>
+<div class='card'>
+<img src='thumbs/query_2_img_224304.jpg'/>
+<div class='small'><b>Captions (GT)</b><br/>A boy jumping in the air from a boogie board.<br/>The child is jumping on the beach above a body board. <br/>A boy riding on a wake board in the water.<br/>A little boy stands on a surfboard in the ocean.<br/>A young child is jumping near a red skateboard on the beach</div>
+</div>
+<h3>Similar images (teacher cosine ≥ threshold)</h3>
+<div class='grid'>
+<div class='card'>
+<img src='thumbs/q2_sim_img_175470.jpg'/>
+<div class='small'>image_id=175470<br/>cos=0.894<br/>A young boy standing on a surfboard in the ocean.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_sim_img_542020.jpg'/>
+<div class='small'>image_id=542020<br/>cos=0.883<br/>A pair of kid surfers hanging out in the water.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_sim_img_295957.jpg'/>
+<div class='small'>image_id=295957<br/>cos=0.882<br/>A girl standing up cautiously on her surfboard.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_sim_img_478338.jpg'/>
+<div class='small'>image_id=478338<br/>cos=0.879<br/>A women using sports equipment on the water.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_sim_img_508328.jpg'/>
+<div class='small'>image_id=508328<br/>cos=0.876<br/>A wet suit keeps a child warm in the cold surf. </div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_sim_img_561576.jpg'/>
+<div class='small'>image_id=561576<br/>cos=0.876<br/>A girl posing with her surf board in the water.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_sim_img_441795.jpg'/>
+<div class='small'>image_id=441795<br/>cos=0.872<br/>The young girl balances herself on the surfboard.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_sim_img_116173.jpg'/>
+<div class='small'>image_id=116173<br/>cos=0.870<br/>The boy is on his surfboard in the water riding it.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_sim_img_4742.jpg'/>
+<div class='small'>image_id=4742<br/>cos=0.868<br/>A man on a surfboard riding an ocean wave.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_sim_img_230843.jpg'/>
+<div class='small'>image_id=230843<br/>cos=0.868<br/>A young boy surfing  in low waves.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_sim_img_117584.jpg'/>
+<div class='small'>image_id=117584<br/>cos=0.867<br/>there is a female surfer that is riding a small wave </div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_sim_img_223550.jpg'/>
+<div class='small'>image_id=223550<br/>cos=0.867<br/>A beautiful young woman attempts to ride a wave on a surf board.</div>
+</div>
+</div>
+<h3>Dissimilar images (teacher cosine &lt; threshold)</h3>
+<div class='grid'>
+<div class='card'>
+<img src='thumbs/q2_dis_img_416968.jpg'/>
+<div class='small'>image_id=416968<br/>cos=0.601<br/>a red and white sign and a tree water and a building</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_dis_img_333626.jpg'/>
+<div class='small'>image_id=333626<br/>cos=0.514<br/>A cook is in a kitchen looking at an aluminum pan.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_dis_img_484371.jpg'/>
+<div class='small'>image_id=484371<br/>cos=0.476<br/>A bunch of food on a platter on a table</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_dis_img_249670.jpg'/>
+<div class='small'>image_id=249670<br/>cos=0.442<br/>A bus driving down a rural country road surrounded by mountains.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_dis_img_490400.jpg'/>
+<div class='small'>image_id=490400<br/>cos=0.532<br/>A man sitting on top of a couch next to a fire place.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_dis_img_99086.jpg'/>
+<div class='small'>image_id=99086<br/>cos=0.495<br/>A herd of zebra walking next to each other across a field.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_dis_img_330316.jpg'/>
+<div class='small'>image_id=330316<br/>cos=0.507<br/>The train on some railroad tracks next to a platform.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_dis_img_482177.jpg'/>
+<div class='small'>image_id=482177<br/>cos=0.518<br/>a small air plane in a field with mountains in the background</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_dis_img_164955.jpg'/>
+<div class='small'>image_id=164955<br/>cos=0.643<br/>a man is making a large jump on a snowboard.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_dis_img_45475.jpg'/>
+<div class='small'>image_id=45475<br/>cos=0.578<br/>A man sits on a motorcycle in the middle of the street.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_dis_img_570116.jpg'/>
+<div class='small'>image_id=570116<br/>cos=0.584<br/>a man and a kid that has a soccer ball </div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_dis_img_288556.jpg'/>
+<div class='small'>image_id=288556<br/>cos=0.410<br/>A coffee cup with some type of material on a plate.</div>
+</div>
+</div>
+<h3>Similar captions to query caption (cosine ≥ threshold)</h3>
+<div class='small'><b>Query caption</b>: A boy jumping in the air from a boogie board.</div>
+<div class='grid'>
+<div class='card'>
+<img src='thumbs/q2_sim_cap_110726_img_430615.jpg'/>
+<div class='small'>caption_id=110726<br/>cos=0.753<br/>A boy jumping in the air with a skateboard.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_sim_cap_536778_img_103697.jpg'/>
+<div class='small'>caption_id=536778<br/>cos=0.750<br/>a boy on a skate board jumping in to the air</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_sim_cap_1391_img_283203.jpg'/>
+<div class='small'>caption_id=1391<br/>cos=0.749<br/>A boy jumping in the air with his skateboard.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_sim_cap_826348_img_372551.jpg'/>
+<div class='small'>caption_id=826348<br/>cos=0.744<br/>Boy jumping in the air on his skate board.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_sim_cap_252542_img_209345.jpg'/>
+<div class='small'>caption_id=252542<br/>cos=0.743<br/>A boy jumping up in the air with a skateboard.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_sim_cap_433619_img_477428.jpg'/>
+<div class='small'>caption_id=433619<br/>cos=0.742<br/>A boy that is jumping in the air with a skateboard.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_sim_cap_422743_img_497082.jpg'/>
+<div class='small'>caption_id=422743<br/>cos=0.742<br/>A boy that is jumping in the air with a skateboard.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_sim_cap_572571_img_142418.jpg'/>
+<div class='small'>caption_id=572571<br/>cos=0.741<br/>a boy that is jumping a skateboard into the air</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_sim_cap_467606_img_482690.jpg'/>
+<div class='small'>caption_id=467606<br/>cos=0.737<br/>A boy is jumping into the air on a skateboard.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_sim_cap_367435_img_75331.jpg'/>
+<div class='small'>caption_id=367435<br/>cos=0.732<br/>A boy is jumping into the air on his skateboard.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_sim_cap_414381_img_551144.jpg'/>
+<div class='small'>caption_id=414381<br/>cos=0.730<br/>A boy is jumping in the air with a skateboard.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_sim_cap_241645_img_281800.jpg'/>
+<div class='small'>caption_id=241645<br/>cos=0.729<br/>A boy jumping in mid air on a skateboard.</div>
+</div>
+</div>
+<h3>Dissimilar captions to query caption (cosine &lt; threshold)</h3>
+<div class='grid'>
+<div class='card'>
+<img src='thumbs/q2_dis_cap_580163_img_81155.jpg'/>
+<div class='small'>caption_id=580163<br/>cos=0.067<br/>A blender with a mixture in it with the lid off.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_dis_cap_682431_img_477042.jpg'/>
+<div class='small'>caption_id=682431<br/>cos=0.005<br/>A woman sitting on a metal bench playing an accordion with passersby.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_dis_cap_691050_img_411855.jpg'/>
+<div class='small'>caption_id=691050<br/>cos=0.025<br/>A toilet that has an open lid with water in it.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_dis_cap_549582_img_14008.jpg'/>
+<div class='small'>caption_id=549582<br/>cos=-0.084<br/>A herd of elephants walking across a grass covered field.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_dis_cap_684341_img_284354.jpg'/>
+<div class='small'>caption_id=684341<br/>cos=0.055<br/>A tall white clock tower sitting next to a parking garage.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_dis_cap_40711_img_214305.jpg'/>
+<div class='small'>caption_id=40711<br/>cos=0.195<br/>A child in front of a raw pizza that needs to be cooked. </div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_dis_cap_450142_img_456147.jpg'/>
+<div class='small'>caption_id=450142<br/>cos=-0.030<br/>A horse statue is in a field of daises.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_dis_cap_604371_img_240691.jpg'/>
+<div class='small'>caption_id=604371<br/>cos=0.012<br/>A cat laying on a chair in a room with a rug. </div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_dis_cap_706116_img_160142.jpg'/>
+<div class='small'>caption_id=706116<br/>cos=0.140<br/>a wood table and a television in a living room</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_dis_cap_754172_img_162937.jpg'/>
+<div class='small'>caption_id=754172<br/>cos=0.085<br/>a boat sails in the middle of a lake </div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_dis_cap_753693_img_81721.jpg'/>
+<div class='small'>caption_id=753693<br/>cos=-0.114<br/>A man and woman toasting with martinis with olives.</div>
+</div>
+<div class='card'>
+<img src='thumbs/q2_dis_cap_756249_img_255224.jpg'/>
+<div class='small'>caption_id=756249<br/>cos=0.026<br/>A demolished, old kitchen is seen in this picture.</div>
+</div>
+</div>
+</body></html>

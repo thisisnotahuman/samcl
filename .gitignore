@@ -1,0 +1,44 @@
+# =========================
+# Cache / temp
+# =========================
+cache/
+
+# =========================
+# Logs
+# =========================
+log_new/
+open_clip-main/logs/
+open_clip-main/logs_debug/
+open_clip-main/logs_new/
+
+# =========================
+# Training outputs
+# =========================
+runs/
+plots/
+
+# =========================
+# Slurm / cluster outputs
+# =========================
+*.out
+*.err
+
+# =========================
+# Model checkpoints
+# =========================
+*.pth
+*.pt
+*.ckpt
+checkpoints/
+
+# =========================
+# Python basic
+# =========================
+__pycache__/
+*.pyc
+
+# =========================
+# OS / IDE
+# =========================
+.DS_Store
+.vscode/

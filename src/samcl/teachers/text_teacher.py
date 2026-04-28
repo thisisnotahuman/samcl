@@ -1,0 +1,57 @@
+from __future__ import annotations
+
+from dataclasses import dataclass
+from typing import Iterable
+
+import torch
+
+
+@dataclass(frozen=True)
+class TextTeacherConfig:
+    model_name: str = "sentence-transformers/all-MiniLM-L6-v2"
+    batch_size: int = 128
+
+
+class FrozenTextTeacher:
+    """
+    Frozen sentence encoder used ONLY for sampling-time similarity.
+    Returns L2-normalized embeddings.
+    """
+
+    def __init__(self, cfg: TextTeacherConfig, device: torch.device) -> None:
+        self.cfg = cfg
+        self.device = device
+        try:
+            from sentence_transformers import SentenceTransformer
+        except Exception as e:  # pragma: no cover
+            raise RuntimeError(
+                "Missing dependency for text teacher. Install `sentence-transformers`."
+            ) from e
+
+        self.model = SentenceTransformer(cfg.model_name, device=str(device))
+        self.model.eval()
+
+    @torch.no_grad()
+    def encode(self, texts: list[str]) -> torch.Tensor:
+        emb = self.model.encode(
+            texts,
+            batch_size=self.cfg.batch_size,
+            show_progress_bar=False,
+            convert_to_tensor=True,
+            normalize_embeddings=True,  # sentence-transformers does L2 norm
+        )
+        return emb.to(self.device)
+
+    @torch.no_grad()
+    def encode_iter(self, texts: Iterable[str], *, chunk_size: int = 4096) -> torch.Tensor:
+        buf: list[str] = []
+        outs: list[torch.Tensor] = []
+        for t in texts:
+            buf.append(t)
+            if len(buf) >= chunk_size:
+                outs.append(self.encode(buf).cpu())
+                buf = []
+        if buf:
+            outs.append(self.encode(buf).cpu())
+        return torch.cat(outs, dim=0) if outs else torch.empty((0, 0))
+
